@@ -1,0 +1,30 @@
+#Set your username
+Username;Chris
+#Set the name of your assistant, can be anything you want
+AssistantName;Aris
+#If true, your unanswered questions get put in a list so you can put them in your inputs file and give them answers in your responses file
+SaveUnansweredQuestions;true
+#If true, will load with a GUI, this is generally gonna be what you want, in 
+GUI;true
+#If true, will show a border around the program so you can move it around and minimize it and stuff
+Border;true
+#Sets the background color of the GUI
+BackgroundColor;#2f343f
+#Sets the color of the text typing area
+TypingAreaColor;#676E7D
+#Sets the color of the font
+FontColor;#ffffff
+#Set the location of your music files
+MusicDir;~/Music
+#If true, generates a log file in the logs folder
+GenerateLog;false
+#If true, text "scrolls" like in rpgs
+Scroll;true
+#Width of window, default is 400
+Width;400
+#Height of window, 600
+Height;600
+#If true, it's fullscreen obviously
+Fullscreen;true
+#Scroll speed in milliseconds
+ScrollSpeed;50

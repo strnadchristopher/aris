@@ -1,0 +1,14 @@
+#Set the morning greeting of your assistant
+MorningGreeting;Good morning, %username%!
+#Set the afternoon greeting
+AfterNoonGreeting;Afternoon, %username%.
+#Set the evening greeting
+EveningGreeting;Good evening, %username%!
+#Set the night greeting
+NightGreeting;Staying in tonight, %username%? That's ok, that means I get to spend more time with you!
+#Set the late night greeting
+LateNightGreeting;Hey %username%, it's a little late isn't it?
+#If true, if and when you give an input that isn't on the input list, it'll ask cleverbot. VERY OFTEN CAUSES LAG!!!!!!!!!!!!!!!
+UseCleverbot;true
+#If true, you will only get responses from cleverbot, but requests for specific tasks to be run will still function properly
+UseOnlyCleverbot;false
