@@ -178,9 +178,31 @@ public class ResponseGenerator {
 			return "Here it is!";
 		}
 		
+		//THIS CALCULATES THE CLOSEST INPUT LINE TO THE INPUT
+				//Parse the input in case it has multiple parts, separated by commas.
+				inputParts = Arrays.asList(input.replaceAll(",.?!", ",").split(","));
+				for(int p = 0; p < inputParts.size(); p++){
+					//Resets matched input
+					//Resets lowest distance
+					matchedInput = inputsList.get(0);
+					lowestDistance = StringUtils.getLevenshteinDistance(inputParts.get(p), matchedInput);
+					//Levenshtein Loop, gets the closest question to input, if the ai didn't ask a question, should detect if its an answer
+					for(int i = 0; i < inputsList.size(); i++){
+						currentString = inputsList.get(i);
+						for(int s = 0; s < currentString.split("/").length; s++)
+						{	
+							currentSlice = currentString.split("/")[s];
+							if(StringUtils.getLevenshteinDistance(inputParts.get(p), currentSlice) < lowestDistance){
+								matchedInput = currentSlice;
+								lowestStringLine = i;
+								lowestDistance = StringUtils.getLevenshteinDistance(inputParts.get(p), currentSlice);
+							}
+						}
+					}
+				}
 		//Checks input list for response.
 		//Sets the response
-		if(lowestDistance < 6)
+		if(lowestDistance < 8)
 		{
 			return answersList.get(lowestStringLine).split("/")[random.nextInt(answersList.get(lowestStringLine).split("/").length)];
 		}
